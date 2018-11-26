@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" lang="en-US" prefix="og: http://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Web Scraping</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Fuentes adicionales CSS3 & Demas-->
+    <!-- BOOTSTRAP CDN -->
+    <!-- Estas son las lineas que le dan la forma al FOOTER de la pagina oficial de Coder-Dojo-->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+        crossorigin="anonymous">
+    <link rel="shortcut icon" href="https://coderdojo.com/wp-content/themes/cd-theme/static/img/coderdojo/favicon.ico" />
+    <link rel="stylesheet" href="https://coderdojo.com/wp-content/themes/cd-theme/static/css/style.min.css" type="text/css">
+    <link rel="stylesheet" href="https://coderdojo.com/wp-content/themes/cd-theme/static/css/cd-common.min.css" type="text/css">
+    <link rel="pingback" href="https://coderdojo.com/xmlrpc.php" />
+    <!-- ******* ***** ******* ******** ******* ***** ****** **** -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"crossorigin="anonymous">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+        crossorigin="anonymous">
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Spicy+Rice" rel="stylesheet">
+    <!-- ANIMATE.CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+   
+    <script src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <script src="https://use.fontawesome.com/fee0636489.js"></script>
+    <script src="https://coderdojo.com/wp-content/themes/cd-theme/static/js/nav.js"></script>
+    <script src="https://coderdojo.com/wp-content/themes/cd-theme/static/js/cd-common.min.js"></script>
+
+    <style>
+        html{
+         font-size: 1rem;
+       }
+     </style>
+</head>
+
+<body class="page-template-default page page-id-118 lead container-fluid" data-template="base.twig">
+
+    <!-- NAVBAR -->
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div><a class="navbar-nav ml-auto nav-item nav-link" href="/index.html" ><img class="animated bounceIn" src="img/Scrapy-Logo-big.png" alt="First slide"></a></div>
+            <div class="container-fluid">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contenido"><i class="far fa-address-card"></i> contenido</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contacto.html"><i class="fas fa-envelope"></i> Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Este es el codigo relacionado a el carrucel o Slider principal-->
+    <div id="carouselExampleIndicators" class="carousel slide container-fluid" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100 animated bounceIn" src="img/MR+CoderDojo.jpg" alt="First slide">
+            </div>
+        </div>
+    </div>
+
+    <!-- Esta es la parte de codigo relacionada al texto de la pagina Web-->
+<div class="container-fluid text-justify">
+    <span>En este ejemplo se empleó el lenguaje de programacion Python para desarrollar una aplicacion web,
+        que permite sustraer datos de paginas en internet que no esten creadas con JavaScript.
+    </span><br><br>
+    <span>Python utilizas dos tecnicas muy polulares para lograr el objetivo anteriormente planteado.
+        las cuales tienen por nombre: Beautiful Soup 4 y Scrapy.
+    </span><br><br>
+
+    <span class="h1">¿Qué es Scrapy?</span><br><br>
+       
+    <span>Scrapy es una plataforma colaborativa o framework de código libre que corre en el lenguaje de Programación
+        Python,
+        cuya finalidad es extraer datos de paginas webs, para ser utilizados para estudios como: La minería de datos,
+        procesamiento de informacíon, manejo de registros históricos, entre otros posibles usos.
+    </span><br><br>
+
+    <span>Scrapy tiene las siguientes caracteristicas:</span><br><br>
+
+        <span>
+            <ul>
+                <li>Rápida y poderosa: Escribes las reglas para extraer los datos y Scrapy hace el resto.</li>
+                <li>Fácilmente extensible: Dada su configuración, esta puede generar nuvas funcionalidades sin tener que 
+                    modificar el código fuente.</li>
+                <li>Portable y Pythonico: Esta caracteristica hace referencia a qu está escrito en Python y puede correr
+                    bajo Linux, Windows, Mac y BSD.
+                </li>
+            </ul>
+        </span><br>
+       
+        <span class="h2">Paso a paso para realizar la tecnica Scraping:</span>
+
+        <span>Para implementar esta tecnica de recolección de informacion en la web, se requiere de las siguientes
+              librerias de python.</span><br>
+
+              <img src="/img/codigo.png" alt="Codigo Python"><br><br>
+
+              <span>
+                    <ul>
+                        <li>La librería Requests: Provee de metodós para obtener todo tipo de información de una URL, ademas nos sirve 
+                                para normalizar datos en tipo JSON.</li><br>
+                        <li>La librería Beautiful Soup 4: Es una librería que permite extraer datos de paginas HTML.</li>
+                    </ul>
+                </span>
+</div>
+
+  <br>
+    <!-- Este es el codigo del Formulario-->
+    <div class="container-fluid">
+        <h2>SCRAPING WEB:</h2>
+        <p class="text-light bg-dark">Es una técnica utilizada mediante programas de software para extraer información
+            de sitios web.</p>
+
+        <div class="form-group">
+            <label for="usr" class="text-light text-muted">Por favor ingrese la URL origen:</label>
+            <input type="text" class="form-control input" id="usr" name="username">
+        </div>
+        <button type="submit" class="btn btn-info scrape btn-lg">Scrape</button>
+        <button type="submit" id="limpiar" class="btn btn-secondary scrape btn-lg">Limpiar</button>
+
+    </div>
+
+    <br>
+    <div class="container-fluid">
+        <p class="lead">Este es un Iframe que te permite visualizar la pagina web de estudio; donde se puede constatar
+            la información sustraída de la misma, por medio de la realización de la tecnica Scraping.</p>
+    </div>
+    <br>
+    <div class="container">
+        <iframe height="500px" width="100%" class="frame" src="https://computacion.mercadolibre.com.co/portatiles/_Desde_101"
+            name="iframe_a"></iframe>
+        <p><a href="https://computacion.mercadolibre.com.co/portatiles/_Desde_101" target="iframe_a">Resultado de la
+                consuta realizada a traves del Scraping.</a></p>
+    </div>
+
+    <!-- Contenido Relacionado al Texto -->
+    <div class="container-fluid" id="contenido">
+        <header class="row">
+            <div class="col-lg-4 text-center">
+                <h3 class="text-success h1">Lorem, ipsum.</h3>
+                <p class="text-body text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam
+                    maxime
+                    itaque inventore! Debitis maiores libero, quos rem voluptatum est non ab sunt error tenetur
+                    reprehenderit voluptatem, repellat autem ad suscipit perspiciatis soluta, quis deserunt! Laborum
+                    fuga
+                </p>
+            </div>
+            <div class="col-lg-4 text-center">
+                <h3 class="text-primary h1">Lorem, ipsum.</h3>
+                <p class="text-warning text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla in
+                    alias velit
+                    quasi fugiat sequi inventore rerum tenetur quibusdam natus amet odio beatae id, iusto doloremque
+                    error sed quia
+                    sint corporis eaque! Aut expedita odio repellat debitis.</p>
+            </div>
+            <div class="col-lg-4 text-center">
+                    <h3 class="text-danger h1">Lorem, ipsum.</h3>
+                    <p class="text-success text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla in
+                        alias velit
+                        quasi fugiat sequi inventore rerum tenetur quibusdam natus amet odio beatae id, iusto doloremque
+                        error sed quia
+                        sint corporis eaque! Aut expedita odio repellat debitis.</p>
+                </div>
+        </header>
+      <hr>
+    </div>
+
+  <!-- Este codigo es para los agradecimientos -->
+    <div class="container">
+        <header class="row">
+            <div class="col-lg-12 text-center">
+                <img src="/img/tit_agradeci.png"  class="bounceIn" alt="Muchas Gracias">
+            </div>
+        </header>
+    </div>
+
+    
+<!-- MODELO DE TARJETAS EN BOOTSTRAO 4-->
+<div class="container-fluid">
+<div class="card-deck">
+    <div class="card">
+        <img class="card-img-top" src="/img/rutan.png" alt="Imagen Ruta~n">
+        <div class="card-body">
+        </div>
+        <div class="card-footer">
+            <a href="https://www.rutanmedellin.org/es/" class="btn btn-success btn-lg btn-block blank">Visita la Pagina Oficial</a>
+        </div>
+    </div>
+    <div class="card">
+        <img class="card-img-top" src="/img/Accenture.png" alt="Imagen Accenture">
+        <div class="card-body">
+        </div>
+        <div class="card-footer">
+            <a href="https://www.accenture.com/co-es/company" class="btn btn-dark btn-lg btn-block">Visita la Pagina Oficial</a>
+        </div>
+    </div>
+    <div class="card">
+        <img class="card-img-top" src="/img/medellin.png" alt="Imagen Alcaldia Medellin">
+        <div class="card-body">
+        </div>
+        <div class="card-footer">
+            <a href="https://www.medellin.gov.co/irj/portal/medellin" class="btn btn-primary btn-lg btn-block">Visita la Pagina Oficial</a>
+        </div>
+    </div>
+</div>
+</div>
+ <!-- Esta es una especie de footer especial -->
+    
+    <div class="container-fluid">
+      <hr>
+        <footer class="bg-light text-center navbar-dark bg-dark p-2">
+            <p class="h4 text-white">Copyright &copy; 2018 ~ <i class="fas fa-yin-yang"></i> Coder-Dojo</p>
+        </footer>
+        <hr>
+    </div>
+    <!--FOOTER DE LA PAGINA WEB DE CODER-DOJO-->
+    <div class="container-fluid">
+    <footer id="footer" class="cd-footer container-fluid">
+        <div class="row">
+            <div class="col-sm-3">
+                <p>Maintained by</p>
+                <img class="cd-footer__foundation-logo" src="https://coderdojo.com/wp-content/themes/cd-theme/static/img/coderdojo/coderdojo-foundation.svg" />
+                </svg>
+            </div>
+            <div class="col-sm-3">
+                <p class="cd-footer__address-line">CoderDojo Foundation,</p>
+                <p class="cd-footer__address-line">Dogpatch Labs Unit 1,</p>
+                <p class="cd-footer__address-line">The CHQ building,</p>
+                <p class="cd-footer__address-line">Custom House Quay,</p>
+                <p class="cd-footer__address-line">Dublin, Ireland</p>
+                <p class="cd-footer__address-line">D01Y6H7</p>
+            </div>
+            <div class="col-sm-3 col-sm-offset-3">
+                <p><a href="https://hwf.zendesk.com/hc/">Help Center</a></p>
+                <p><a href="/newsletter">Sign Up For Newsletter</a></p>
+                <p><a href="https://www.flickr.com/photos/helloworldfoundation/">Photos and Videos</a></p>
+                <p><a href="/donate/">Donate</a></p>
+                <p><a href="https://zen.coderdojo.com/privacy-statement">Privacy Statement</a></p>
+                <p class="cd-footer__social-icons">
+                    <a href="https://twitter.com/coderdojo" target="_blank">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+                            <i class="fa fa-twitter fa-stack-1x cd-footer__social-icons__icon" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                    <a href="https://facebook.com/coderdojo" target="_blank">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+                            <i class="fa fa-facebook fa-stack-1x cd-footer__social-icons__icon" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                    <a href="https://plus.google.com/+coderdojo" target="_blank">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+                            <i class="fa fa-google-plus fa-stack-1x cd-footer__social-icons__icon" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                    <a href="https://www.linkedin.com/company/coderdojo" target="_blank">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-linkedin fa-stack-1x cd-footer__social-icons__icon"></i>
+                        </span>
+                    </a>
+                    <a href="https://www.coderdojo.com/contact/">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+                            <i class="fa fa-envelope fa-stack-1x cd-footer__social-icons__icon" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                    <a href="https://coderdojo.com/coderdojo-global-slack/">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+                            <i class="fa fa fa-slack fa-stack-1x cd-footer__social-icons__icon" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+</div>
+    <script type='text/javascript' src='https://coderdojo.com/wp-content/plugins/sassy-social-share/public/js/sassy-social-share-public.js?ver=3.2.5'></script>
+    <script type='text/javascript' src='https://coderdojo.com/wp-includes/js/wp-embed.min.js?ver=4.9.8'></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://coderdojo.com/wp-content/themes/cd-theme/static/js/fitvids.min.js"></script>
+    <script src="https://coderdojo.com/wp-content/themes/cd-theme/static/site.js"></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-25136319-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-25136319-1');
+    </script>
+    <script src="https://cdn.optimizely.com/js/3847550948.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
